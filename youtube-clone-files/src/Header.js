@@ -20,14 +20,14 @@ function Header() {
       </div>
 
       <div className='header__input'>
-        <input type="text" />
-        <SearchIcon />
+        <input type="text" placeholder='Search'/>
+        <SearchIcon className='header__inputButton'/>
       </div>
 
       <div className='header__icons'>
-        <VideoCallIcon />
-        <AppsIcon />
-        <NotificationsIcon />
+        <VideoCallIcon className='header__icon'/>
+        <AppsIcon className='header__icon'/>
+        <NotificationsIcon className='header__icon'/>
         <Avatar
           alt="profile-button"
           src="https://avatars.githubusercontent.com/u/85318393?s=400&u=b564d5fe1d357e061a59e5028348bcb5e570ab36&v=4"
