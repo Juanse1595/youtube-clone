@@ -1,8 +1,10 @@
 import './App.css';
-import Header from './Header';
-import Sidebar from './Sidebar';
-import RecommendedVideos from './RecommendedVideos';
-import {BrowserRouter as Router, Routes, Route} from 'react-router-dom';
+// import Header from './Header';
+// import Sidebar from './Sidebar';
+// import RecommendedVideos from './RecommendedVideos';
+import MainPage from './MainPage';
+import SearchPage from './SearchPage';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
@@ -10,21 +12,8 @@ function App() {
     <div className="app">
       <Router>
         <Routes>
-          <Route path='/'>
-            <>
-              <Header />
-              <div className='app__page'>
-                <Sidebar />
-                <RecommendedVideos />
-              </div>
-            </>
-          </Route>
-          <Route path='/search'>
-            <>
-            </>
-            <Header />
-            <h1>Search</h1>
-          </Route>
+          <Route path='/' element={<MainPage />} />
+          <Route path='/search/:searchTerm' element={<SearchPage />} />
         </Routes>
       </Router>
     </div>
