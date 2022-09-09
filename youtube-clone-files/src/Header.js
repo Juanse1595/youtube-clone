@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import "./Header.css";
 import MenuIcon from '@mui/icons-material/Menu';
 import SearchIcon from '@mui/icons-material/Search';
@@ -9,6 +9,8 @@ import { Avatar } from '@mui/material';
 
 
 function Header() {
+  const [inputSearch, setInputSearch] = useState('');
+
   return (
     <div className='header'>
       <div className='header__left'>
@@ -20,14 +22,19 @@ function Header() {
       </div>
 
       <div className='header__input'>
-        <input type="text" placeholder='Search'/>
-        <SearchIcon className='header__inputButton'/>
+        <input
+          type="text"
+          placeholder='Search'
+          value={inputSearch}
+          onChange={event => setInputSearch(event.target.value)}
+        />
+        <SearchIcon className='header__inputButton' />
       </div>
 
       <div className='header__icons'>
-        <VideoCallIcon className='header__icon'/>
-        <AppsIcon className='header__icon'/>
-        <NotificationsIcon className='header__icon'/>
+        <VideoCallIcon className='header__icon' />
+        <AppsIcon className='header__icon' />
+        <NotificationsIcon className='header__icon' />
         <Avatar
           alt="profile-button"
           src="https://avatars.githubusercontent.com/u/85318393?s=400&u=b564d5fe1d357e061a59e5028348bcb5e570ab36&v=4"
