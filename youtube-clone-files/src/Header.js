@@ -6,6 +6,7 @@ import VideoCallIcon from '@mui/icons-material/VideoCall';
 import AppsIcon from "@mui/icons-material/Apps";
 import NotificationsIcon from "@mui/icons-material/Notifications";
 import { Avatar } from '@mui/material';
+import { Link } from 'react-router-dom';
 
 
 function Header() {
@@ -15,10 +16,13 @@ function Header() {
     <div className='header'>
       <div className='header__left'>
         <MenuIcon />
-        <img
-          className='header__logo'
-          src="https://upload.wikimedia.org/wikipedia/commons/9/9e/YouTube_Logo_%282013-2017%29.svg"
-          alt='youtube-logo' />
+        <Link to="/">
+          <img
+            className='header__logo'
+            src="https://upload.wikimedia.org/wikipedia/commons/9/9e/YouTube_Logo_%282013-2017%29.svg"
+            alt='youtube-logo'
+          />
+        </Link>
       </div>
 
       <div className='header__input'>
@@ -28,7 +32,9 @@ function Header() {
           value={inputSearch}
           onChange={event => setInputSearch(event.target.value)}
         />
-        <SearchIcon className='header__inputButton' />
+        <Link to={`/search/${inputSearch}`}>
+          <SearchIcon className='header__inputButton' />
+        </Link>
       </div>
 
       <div className='header__icons'>
