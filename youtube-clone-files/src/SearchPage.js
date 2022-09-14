@@ -1,11 +1,18 @@
 import React from 'react';
+import './App.css'
+// components
 import Header from './Header';
+import SearchResult from './SearchResult';
+import Sidebar from './Sidebar';
 
 function SearchPage() {
   return (
     <>
       <Header />
-      <h1>Search</h1>
+      <div className='app__page'>
+        <Sidebar />
+        <SearchResult />
+      </div>
     </>
   )
 }

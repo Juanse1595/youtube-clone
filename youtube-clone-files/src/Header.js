@@ -32,7 +32,7 @@ function Header() {
           value={inputSearch}
           onChange={event => setInputSearch(event.target.value)}
         />
-        <Link to={`/search/${inputSearch}`}>
+        <Link to={`/search/${inputSearch ? inputSearch : ''}`}>
           <SearchIcon className='header__inputButton' />
         </Link>
       </div>
