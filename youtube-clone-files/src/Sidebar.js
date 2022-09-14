@@ -14,7 +14,6 @@ import ExpandMoreOutlinedIcon from '@mui/icons-material/ExpandMoreOutlined';
 function Sidebar() {
   return (
     <div className='sidebar'>
-      <h2>This is the sidebar</h2>
       <SidebarRow selected title='Home' Icon={HomeIcon} />
       <SidebarRow title='Trending' Icon={WhatshotIcon} />
       <SidebarRow title='Subscription' Icon={SubscriptionsIcon} />
