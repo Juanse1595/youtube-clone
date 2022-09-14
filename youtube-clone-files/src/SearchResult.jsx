@@ -18,7 +18,7 @@ function SearchResult() {
         verified
         subs="1.17M"
         noOfVideos={450}
-        description="Awesome programers teaching"
+        description="Awesome programers teaching, find here amazing lessons of programming in different languages..."
       />
     </div>
   )
