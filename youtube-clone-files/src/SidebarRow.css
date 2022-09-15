@@ -21,11 +21,11 @@
   cursor: pointer;
 }
 
-.sidebarRow:hover > .sidebarRow__icon {
+.sidebarRow:hover>.sidebarRow__icon {
   color: red;
 }
 
-.sidebarRow:hover > .sidebarRow__title {
+.sidebarRow:hover>.sidebarRow__title {
   font-weight: bold;
 }
 
@@ -33,10 +33,10 @@
   background-color: lightgray;
 }
 
-.sidebarRow.selected > .sidebarRow__icon {
-  color: blue;
+.sidebarRow.selected>.sidebarRow__icon {
+  color: red;
 }
 
-.sidebarRow.selected > .sidebarRow__title {
+.sidebarRow.selected>.sidebarRow__title {
   font-weight: bold;
 }
